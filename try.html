@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="try.css">
+</head>
+<body>
+    
+
+    <div class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <div class="slides-container" id="slides-container">
+          <div class="slide"><img src="mount.jfif" alt=""></div>
+          <div class="slide"><img src="knee.jfif" alt=""></div>
+          <div class="slide"><img src="knee1.jfif" alt=""></div>
+          <div class="slide"><img src="" alt=""></div>
+        </div>
+      </div>
+      
+      <footer>
+        Pen by <a href="https://www.jemimaabu.com" target="_blank" rel="noopener">Jemima Abu</a> <span class="heart">&hearts;</span>
+      </footer>
+
+</body>
+</html>
+
+
+<script>
+
+
+
+
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
+});
+
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+});
+
+</script>
